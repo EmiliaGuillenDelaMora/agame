@@ -16,13 +16,5 @@
 
 <script>
     export default {
-
-        data(){
-            return{
-                live.Math.round(Math.random());
-            }
-        }
-
      }
-    }
 </script>

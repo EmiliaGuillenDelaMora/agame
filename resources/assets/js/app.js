@@ -17,12 +17,31 @@ window.Vue = require('vue');
 
 window.eventBus = new Vue(); 
 
+import CELL from './components/cell.vue';
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const app = new Vue({
-    el: '#app'
-    data{
+    el: '#app',
+    components:{
+    	'cell':CELL
+    },
+    data : {
     	x:3,
     	y:3
     },
+    computed:{
+    	x_item(){
+    		return parseInt(this.x);
+    	},
+    	y_item(){
+    		return parseInt(this.y);
+    	}
+    },
+    methods:{
+    	change(){
+    		this.$children.forEach(function(item,index){
+    			console.log(item.something());
+    		});
+    	}
+    }
 });
