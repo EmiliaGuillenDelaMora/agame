@@ -38,10 +38,10 @@ const app = new Vue({
     	}
     },
     methods:{
-    	//change(){
-    	//	this.$children.forEach(function(item,index){
-    		//	console.log(item.something());
-    	//	});
-    	//}
+    	change(){
+    		this.$children.forEach(function(item,index){
+    			console.log(item.something());
+    		});
+    	}
     }
 });

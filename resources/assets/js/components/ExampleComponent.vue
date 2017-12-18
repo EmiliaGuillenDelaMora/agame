@@ -6,7 +6,6 @@
                     <div class="panel-heading">Game of life</div>
 
                     <div class="panel-body">
-                        I'm an example component!
                     </div>
                 </div>
             </div>

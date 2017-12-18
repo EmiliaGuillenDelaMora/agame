@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Emilia</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <div class="container">
@@ -19,7 +19,7 @@
                     </div>
                     @{{$data}}
                 </div>
-                <a @click="change" class="btn">Cambiar</a>>
+                <a @click="change" class="btn">Cambiar</a>
             </div>
             <table class="table">
                 <tr v-for="row in y_item">

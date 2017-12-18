@@ -1,5 +1,5 @@
 <template>
-	<div :class="live_item ? 'cell-live' : 'cell'">{{x}}-{{y}}</div>
+	<div :class="live_item ? 'cell-live' : 'cell'">{{is_live}}</div>
 </template>
 
 <script >
@@ -28,7 +28,7 @@
 				let x = $.inArray(data.x[this.x - 1, this.x, this.x+1]);
 				let y = $.inArray(data.y[this.y - 1, this.y, this.y+1]);
 
-				if(x!= =1 && y != -1){
+				if(x!= -1 && y != -1){
 					this.is_live ++;
 					console.log(this.is_live);
 				}
@@ -37,6 +37,13 @@
 		},
 		methods:{
 			something(){
+				/*
+				return{
+					x: this.x,
+					y: this.y,
+					status: this.live
+				};
+				*/
 				this.is_live = 0;
 				if(this.live){
 					eventBus.$emit('status',{
@@ -45,7 +52,7 @@
 						status : this.live
 					});
 				}
-
+//condiciones
 				if(this.live && (this.is_live < 2 || this.is_live > 3) ){
                     console.log('vive');
                     this.live = !this.live;
@@ -54,11 +61,7 @@
                     console.log('muere')
                     this.live = !this.live;
                 }
-				//return{
-				//	x: this.x,
-				//	y: this.y,
-				//	status: this.live
-				//};
+				
 			},
 		}
 	}
