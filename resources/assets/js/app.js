@@ -25,7 +25,7 @@ const app = new Vue({
     components:{
     	'cell':CELL
     },
-    data : {
+    data:{
     	x:3,
     	y:3
     },
@@ -38,10 +38,10 @@ const app = new Vue({
     	}
     },
     methods:{
-    	change(){
-    		this.$children.forEach(function(item,index){
-    			console.log(item.something());
-    		});
-    	}
+    	//change(){
+    	//	this.$children.forEach(function(item,index){
+    		//	console.log(item.something());
+    	//	});
+    	//}
     }
 });

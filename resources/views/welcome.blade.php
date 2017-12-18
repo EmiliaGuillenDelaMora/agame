@@ -10,11 +10,11 @@
             <div class="row">
                 <div class="col">
                     <div class="form-group" >
-                        <label for="x">Ancho</label>
+                        <label for="x">Columnas</label>
                         <input id="x" type="text" v-model="x">
                     </div>
                     <div class="form-group">
-                        <label for="y">Alto</label>
+                        <label for="y">Filas</label>
                         <input id="y" type="text" v-model="y">  
                     </div>
                     @{{$data}}
